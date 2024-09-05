@@ -252,6 +252,17 @@ body {
     }
 }
 
+progress {
+    border: 2px solid #808080;
+    width: 100%;
+    height: 10px;
+    border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+    background-color: #fff;
+}
+
 .box-award {
     margin-top: 15px;
     padding: 10px 15px;
@@ -360,7 +371,7 @@ body {
     margin-bottom: 64px;
 }
 
-#btn {
+.start-farming-btn {
     background-color: #808080;
     width: 80%;
     height: 30px;
@@ -370,8 +381,26 @@ body {
     color: #fff;
     outline: none;
     border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     text-align: center;
     /* opacity: 0.9;*/
+}
+
+.farming-btn button:disabled {
+    background-color: #000000;
+    cursor: not-allowed;
+    color: #fcf9f9;
+}
+
+.farming-btn button img {
+    display: none;
+}
+
+.farming-btn button .timer {
+    font-size: 9px;
+    display: none;
 }
 
 
@@ -502,19 +531,11 @@ p.daily-tasks {
     align-items: center;
     gap: 3px;
     padding: 0 5px;
-
-    p {
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
-    }
 }
 
 .task-text {
     font-weight: bolder;
-    font-family: monospace;
     font-size: 15px;
-    align-items: center;
-    display: flex;
-    text-align: center;
 }
 
 .task-award-amount {
@@ -574,6 +595,7 @@ p.daily-tasks {
 
 .level-page {
     width: 100vw;
+    margin-bottom: 40px;
 }
 
 .level-container {
@@ -713,16 +735,10 @@ p.daily-tasks {
     margin-bottom: 5px;
 }
 
-.requirements2 {
-    display: flex;
-    gap: 2px;
-    font-size: 8px;
-    align-items: center;
-    margin-bottom: 5px;
-}
-
-progress {
-    width: 100%;
+.requirement1 input[type="checkbox"],
+.requirement2 input[type="checkbox"] {
+    width: 8px;
+    height: 8px;
 }
 
 /*Level page styling ends*/
@@ -995,13 +1011,16 @@ progress {
 
 .mission-box-container {
     bottom: 0;
-    width: 100%;
-    padding: 10px 15px;
+    width: 94%;
+    margin: 3px auto;
+    background-color: #a8a5a5;
+    height: 100%;
 }
 
 .mission-box {
     height: 100%;
-    background-color: #a8a5a5;
+    margin-bottom: 5px;
+    padding-top: 5px;
 }
 
 .mission-boxes {
@@ -1022,6 +1041,7 @@ progress {
     width: 40px;
     height: 100%;
     background-color: #7f807f;
+    opacity: 0.8;
 }
 
 .mission-boxes2 {
@@ -1425,11 +1445,6 @@ button {
         font-size: 10px;
     }
 
-    .footer-box1 {
-        display: flex;
-        flex-direction: row;
-    }
-
     .level {
         display: flex;
         flex-direction: row;
@@ -1439,6 +1454,99 @@ button {
         display: flex;
         flex-direction: row;
     }
+
+    .box-award {
+        margin-top: 15px;
+        padding: 10px 15px;
+        background-color: rgba(24, 21, 1, 0.74);
+        border-radius: 15px;
+        border-top-right-radius: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        box-shadow: 0px 0px 0px 3px rgba(255, 255, 255, 0.87) inset;
+        gap: 5px;
+
+        .box {
+            width: 120px;
+            height: 100px;
+            background-color: rgba(209, 202, 202, 0.582);
+            border-radius: 15px;
+            position: relative;
+
+            .bullet {
+                display: flex;
+                float: right;
+                margin: 7px;
+            }
+
+            .bullet::before {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: #fff;
+                opacity: 1;
+                content: "";
+            }
+
+            .box-icon {
+                position: absolute;
+                top: 40%;
+                left: 50%;
+                transform: translate(-50%, -40%) !important;
+            }
+
+            p.daily-title {
+                font-size: 12px;
+                font-weight: bold;
+                margin-bottom: 5px;
+                position: absolute;
+                top: 65%;
+                width: 100%;
+                text-align: center;
+                justify-content: center;
+            }
+
+            .box-icon img {
+                background-color: rgb(12, 12, 12);
+                border-radius: 50%;
+                padding: 5px;
+            }
+        }
+    }
+
+    .footer {
+        background-color: rgba(0, 0, 0, 0.918);
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        justify-content: space-between;
+        position: fixed;
+        width: 100vw;
+        height: 50px;
+        background-color: #000;
+        bottom: 0;
+        color: white;
+
+        .footer-box1 {
+            display: flex;
+            width: 30%;
+            gap: 10px;
+            margin: 5px 10px;
+            justify-content: space-between;
+
+            .footer-box {
+                text-align: center;
+            }
+        }
+
+        .home {
+            position: relative;
+            top: -8px;
+            left: 8px;
+        }
+    }
+
 }
 
 @media screen and (max-width: 380px) {
