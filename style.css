@@ -30,8 +30,9 @@ body {
 
 /* loading page styling begins */
 
-.preloader {
+#preloader {
     height: 100vh;
+    display: block;
 
     .preloader-container {
         width: 100vw;
@@ -403,6 +404,29 @@ progress::-webkit-progress-value {
     display: none;
 }
 
+.farm-box {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.farming-box {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    text-align: center;
+}
+
+#level-speed {
+    font-size: 10px;
+    display: none;
+}
+
+#amount {
+    display: none;
+    font-size: 12px;
+}
 
 /* footer styling begins */
 .footer {
@@ -971,10 +995,16 @@ p.daily-tasks {
     display: flex;
     gap: 20px;
     font-weight: bolder;
-    width: 100%;
-    padding: 0 15px;
     font-size: 15px;
     margin-top: 30px;
+    width: 94%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mission-option button {
+    border: none;
+    outline: none;
 }
 
 .opt {
@@ -986,6 +1016,14 @@ p.daily-tasks {
     font-weight: bolder;
     line-height: 25px;
     margin: 5px 0;
+}
+
+#activeTask {
+    display: block;
+}
+
+#taskComplete {
+    display: none;
 }
 
 .disclaimer {
@@ -1041,7 +1079,6 @@ p.daily-tasks {
     width: 40px;
     height: 100%;
     background-color: #7f807f;
-    opacity: 0.8;
 }
 
 .mission-boxes2 {
@@ -1079,6 +1116,95 @@ button {
     padding: 3px 5px;
     border-radius: 15px;
     border: none;
+}
+
+.task button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.start-btn {
+    background-color: #000000;
+    color: #fff;
+    padding: 3px 7px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.verify-btn1 {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 3px 7px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+.complete-btn {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+.completed-tasks .task {
+    background-color: #792217;
+}
+
+/* model styling */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 10px;
+    background-color: black;
+    border: none;
+    cursor: pointer;
+}
+
+/* animation for modal */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 /*Mission page styling ends*/

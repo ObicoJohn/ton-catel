@@ -124,10 +124,20 @@
                 <!-- main-box-farming-btn -->
                 <div class="farming-btn">
                     <button id="farmingBtn" class="start-farming-btn" onclick="startFarming()">
-                        <span id="farmingText">Start Farming</span>
-                        <img id="farmingImg" src="images/Transparent Ton Catel logo.png"
-                            style="height: 20px; width: 20px;">
-                        <span class="timer" id="timer">04:00:00</span>
+                        <div class="farm-box">
+                            <div class="farming-box"> <span id="farmingText">Start Farming</span>
+                                <img id="farmingImg" src="images/Transparent Ton Catel logo.png"
+                                    style="height: 20px; width: 20px;">
+                                <span class="farming-amount" id="amount">0</span>
+                            </div>
+                            <div class="farming-box">
+                                <span class="timer" id="timer">04:00:00</span>
+                                <div id="level-speed">
+                                    ⚡x1500/4hrs
+                                </div>
+                            </div>
+                        </div>
+
                     </button>
                 </div>
             </div>

@@ -47,37 +47,38 @@
                 </div>
                 <!-- mission-option -->
                 <div class="mission-option">
-                    <p class="opt">Active</p>
-                    <p class="opt">Completed</p>
+                    <button type="button" class="opt toggle-btn" onclick="activebtn()">Active</button>
+                    <button type="button" class="toggle-btn1" onclick="completebtn()">Complete</button>
                 </div>
                 <!-- mission-box-container-->
-                <div class="mission-box-container">
+                <div id="activeTask" class="mission-box-container">
                     <!-- mission-box -->
                     <div class="mission-box">
                         <!-- mission-boxes -->
                         <div class="mission-boxes">
-                            <img src="images/icons8-twitterx.svg">
+                            <img src="images/icons8-twitterx (2).svg">
                             <div class="mission-boxes1">
                                 <!-- mission task -->
                                 <p>Join Ton Catel on X</p>
                                 <div class="mission-boxes2">
                                     <p>+500</p>
                                     <!-- mission start-btn -->
-                                    <button class="mission-btn"><a href="verify.html">Start</a></button>
+                                    <button class="start-btn" onclick="startTask(this)">Start</button>
+                                    <button class="verify-btn1" onclick="openModal(this)">Verify</button>
                                 </div>
                             </div>
                         </div>
                         <!-- mission-boxes -->
                         <div class="mission-boxes">
-                            <img
-                                src="images/telegram-communication-chat-interaction-network-connection-svgrepo-com.svg">
+                            <img src="images/telegram-svgrepo-com.svg">
                             <div class="mission-boxes1">
                                 <!-- mission task -->
                                 <p>Join Ton Catel on Telegram</p>
                                 <div class="mission-boxes2">
                                     <p>+500</p>
                                     <!-- mission start-btn -->
-                                    <button class="mission-btn"><a href="verify.html">Start</a></button>
+                                    <button class="start-btn" onclick="startTask(this)">Start</button>
+                                    <button class="verify-btn1" onclick="openModal(this)">Verify</button>
                                 </div>
                             </div>
                         </div>
@@ -90,7 +91,8 @@
                                 <div class="mission-boxes2">
                                     <p>+400</p>
                                     <!-- mission start-btn -->
-                                    <button class="mission-btn"><a href="verify.html">Start</a></button>
+                                    <button class="start-btn" onclick="startTask(this)">Start</button>
+                                    <button class="verify-btn1" onclick="openModal(this)">Verify</button>
                                 </div>
                             </div>
                         </div>
@@ -103,7 +105,8 @@
                                 <div class="mission-boxes2">
                                     <p>+300</p>
                                     <!-- mission start-btn -->
-                                    <button class="mission-btn"><a href="verify.html">Start</a></button>
+                                    <button class="start-btn" onclick="startTask(this)">Start</button>
+                                    <button class="verify-btn1" onclick="openModal(this)">Verify</button>
                                 </div>
                             </div>
                         </div>
@@ -116,7 +119,8 @@
                                 <div class="mission-boxes2">
                                     <p>+200</p>
                                     <!-- mission start-btn -->
-                                    <button class="mission-btn"> <a href="verify.html">Start</a></button>
+                                    <button class="start-btn" onclick="startTask(this)">Start</button>
+                                    <button class="verify-btn1" onclick="openModal(this)">Verify</button>
                                 </div>
                             </div>
                         </div>
@@ -127,8 +131,94 @@
                         <button class="promo-btn">Click here for promo and partnership</button>
                     </div>
                 </div>
+                <div id="taskComplete" class="mission-box-container">
+                    <!-- mission-box -->
+                    <div class="mission-box">
+                        <div class="mission-boxes">
+                            <img src="images/icons8-twitterx (2).svg">
+                            <div class="mission-boxes1">
+                                <!-- mission task -->
+                                <p>Join Ton Catel on X</p>
+                                <div class="mission-boxes2">
+                                    <p>+500</p>
+                                    <!-- mission start-btn -->
+                                    <button class="mission-btn"><a href="verify.html">Start</a></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
+    </div>
+    <!-- modal for verifying task -->
+    <div id="verifyModal" class="modal">
+        <div class="mission-body">
+            <!-- verify container -->
+            <div class="mission-container">
+                <div class="mission-containers">
+                    <!-- verify-cancel -->
+                    <div class="mission-cancel">
+                        <a href="mission.html"><i class='bx bxs-left-arrow'></i></a>
+                    </div>
+                    <!-- verify header -->
+                    <div class="mission-header">
+                        <p>Missions</p>
+                    </div>
+                    <!-- verify info -->
+                    <div class="mission-info">
+                        <p class="mission-bal">Balance</p>
+                        <!-- verify coin balance -->
+                        <div class="mission-balance">
+                            <!-- coin amount -->
+                            <div class="coin-amount">
+                                <img src="images/Transparent Ton Catel logo.png" style="height: 25px; width: 25px;">
+                                <p>0</p>
+                            </div>
+                        </div>
+                        <!-- verify question -->
+                        <div class="verify-question">
+                            <p>Are you sure, you</p>
+                            <p>completed the mission?</p>
+                        </div>
+                        <!-- verify text -->
+                        <div class="verify-notice">
+                            <p>If you attempt to cheat, Don Catos</p>
+                            <p>Will punish you by deducting your balance.</p>
+                            <p>❗If Cheating persists, Don Catos will banish you❗</p>
+                        </div>
+                    </div>
+                    <!-- verify box -->
+                    <div class="verify-box">
+                        <!-- verify award/penalty box -->
+                        <div class="award-penalty">
+                            <!-- verify award box -->
+                            <div class="award-box">
+                                <p class="award-text">+500</p>
+                                <p class="award">Reward</p>
+                            </div>
+                            <p>vs</p>
+                            <!-- verify penalty box -->
+                            <div class="penalty-box">
+                                <p class="penalty-text">-1000</p>
+                                <p class="penalty">Penalty</p>
+                            </div>
+                        </div>
+                        <!-- verify btn -->
+                        <div class="verify-btns">
+                            <button class="verify-btn">Yes, verify.</button>
+                            <button class="check-btn">Check again</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="modal-content">
+            <button class="close-btn" onclick="closeModal()">X</button>
+            <p>Are you sure you completed task?</p>
+            <button onclick="completeTask()">Yes, Compete Task</button>
+        </div> -->
     </div>
     <!-- footer section -->
     <div class="footer">
