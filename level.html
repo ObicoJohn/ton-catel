@@ -16,27 +16,26 @@
     <!-- level page -->
     <div class="level-body">
         <div class="level-page">
+            <!-- level header -->
+            <div class="level-header">
+                <!-- level title -->
+                <div class="lvl-title">
+                    <div class="lvl-bullet"></div>
+                    <p>Levels</p>
+                    <div class="lvl-bullet"></div>
+                </div>
+                <!-- level cancel -->
+                <!-- <div class="level-cancel">
+                <a href="index.html"><i class='bx bxs-left-arrow'></i></a>
+                </div> -->
+            </div>
             <!-- level container -->
             <div class="level-container">
-                <!-- level header -->
-                <div class="level-header">
-                    <!-- level title -->
-                    <div class="lvl-title">
-                        <div class="lvl-bullet"></div>
-                        <p>Levels</p>
-                        <div class="lvl-bullet"></div>
-                    </div>
-                    <!-- level cancel -->
-                    <!-- <div class="level-cancel">
-                        <a href="index.html"><i class='bx bxs-left-arrow'></i></a>
-                    </div> -->
-                </div>
-                <!-- level box -->
+                <!-- level 1 -->
                 <div class="level-box">
-                    <!-- level box1 -->
-                    <div class="level-box1">
+                    <div class="level-item">
                         <!-- level image -->
-                        <img src="images/IMG_2105.PNG">
+                        <img src="level img/Lvl1.jpg">
                         <!-- level box-text -->
                         <div class="lvlbox-text">
                             <!-- level name -->
@@ -44,17 +43,19 @@
                             <!-- level coin -->
                             <p class="lvl-coin">0 Gato</p>
                             <!-- level farming speed -->
-                            <p>1000/4hrs</p>
+                            <p class="level-speed">1000/4hrs</p>
                             <!-- level upgred-btn -->
                             <div class="upgrade-btn">
-                                <button onclick="upgradeClr()" id="upgrade-btn">Upgrade</button>
+                                <button onclick="upgradeLevel(1)" class="upgrade-btn">Upgrade</button>
                             </div>
                         </div>
                     </div>
-                    <!-- level box1 -->
-                    <div class="level-box1">
+                </div>
+                <!-- level 2 -->
+                <div class="level-box">
+                    <div class="level-item">
                         <!-- level image -->
-                        <img src="images/lvl2.PNG" width="20px, height: 30px">
+                        <img src="level img/Lvl2.jpg" width="20px, height: 30px">
                         <!-- level box-text -->
                         <div class="lvlbox-text">
                             <!-- level name -->
@@ -62,17 +63,29 @@
                             <!-- level coin -->
                             <p class="lvl-coin">20,000 Gato</p>
                             <!-- level farming speed -->
-                            <p>1500/4hrs</p>
+                            <p class="level-speed">1500/4hrs</p>
                             <!-- level upgrade-btn -->
                             <div class="upgrade-btn">
-                                <button onclick="upgradeClr()" id="upgrade-btn">Upgrade</button>
+                                <button onclick="upgradeLevel(2)" class="upgrade-btn">Upgrade</button>
                             </div>
                         </div>
                     </div>
-                    <!-- level box1 -->
-                    <div class="level-box1">
+                </div>
+                <!-- level 3 -->
+                <div class="level-box">
+                    <!-- locked -->
+                    <div class="level-cover">
+                        <img src="images/lock-svgrepo-com.svg" alt="lock level">
+                        <div class="lvlbox-info">
+                            <h2>Locked</h2>
+                            <p>Pass level 2</p>
+                            <p>to unlock</p>
+                        </div>
+                    </div>
+                    <!-- level content -->
+                    <div class="level-item locked">
                         <!-- level image -->
-                        <img src="images/lvl3.PNG" width="20px, height: 30px">
+                        <img src="level img/Lvl3.jpg" width="20px, height: 30px">
                         <!-- level box-text -->
                         <div class="lvlbox-text">
                             <!-- level name -->
@@ -103,12 +116,22 @@
                         </div>
                     </div>
                 </div>
-                <!-- level box -->
+
+                <!-- level 4 -->
                 <div class="level-box">
-                    <!-- level box1 -->
-                    <div class="level-box1">
+                    <!-- locked -->
+                    <div class="level-cover">
+                        <img src="images/lock-svgrepo-com.svg" alt="lock level">
+                        <div class="lvlbox-info">
+                            <h2>Locked</h2>
+                            <p>Pass level 3</p>
+                            <p>to unlock</p>
+                        </div>
+                    </div>
+                    <!-- level content -->
+                    <div class="level-item locked">
                         <!-- level image -->
-                        <img src="images/lvl4.PNG" width="20px, height: 30px">
+                        <img src="level img/Lvl4.jpg" width="20px, height: 30px">
                         <!-- level box-text -->
                         <div class="lvlbox-text">
                             <!-- level name -->
@@ -119,14 +142,27 @@
                             <p>4000/4hrs</p>
                             <!-- level upgrade-btn -->
                             <div class="upgrade-btn">
-                                <button onclick="upgradeClr()" id="upgrade-btn">Upgrade</button>
+                                <button onclick="upgradeLevel(4)" class="upgrade-btn">Upgrade</button>
                             </div>
                         </div>
                     </div>
-                    <!-- level box1 -->
-                    <div class="level-box1">
+                </div>
+
+                <!-- level 5 -->
+                <div class="level-box">
+                    <!-- locked -->
+                    <div class="level-cover">
+                        <img src="images/lock-svgrepo-com.svg" alt="lock level">
+                        <div class="lvlbox-info">
+                            <h2>Locked</h2>
+                            <p>Pass level 4</p>
+                            <p>to unlock</p>
+                        </div>
+                    </div>
+                    <!-- level content -->
+                    <div class="level-item locked">
                         <!-- level image -->
-                        <img src="images/lvl5.PNG" width="20px, height: 30px">
+                        <img src="level img/Lvl5.jpg" width="20px, height: 30px">
                         <!-- level box-text -->
                         <div class="lvlbox-text">
                             <!-- level-name -->
@@ -134,10 +170,10 @@
                             <!-- level-coin -->
                             <p class="lvl-coin">80,000 Gato</p>
                             <!-- level farming speed -->
-                            <p>7000/4hrs</p>
+                            <p class="level-speed">7000/4hrs</p>
                             <!-- level upgrade-btn -->
                             <div class="upgrade-btn">
-                                <button onclick="upgradeClr()" id="upgrade-btn">Upgrade</button>
+                                <button onclick="upgradeLevel(5)" class="upgrade-btn">Upgrade</button>
                             </div>
                             <!-- level uprade-requirement -->
                             <div class="requirement">
@@ -156,9 +192,22 @@
                             </div>
                         </div>
                     </div>
-                    <!-- level box1 -->
-                    <div class="level-box1">
-                        <img src="images/lvl6.PNG" width="20px, height: 30px">
+                </div>
+
+                <!-- level 6 -->
+                <div class="level-box">
+                    <!-- locked -->
+                    <div class="level-cover">
+                        <img src="images/lock-svgrepo-com.svg" alt="lock level">
+                        <div class="lvlbox-info">
+                            <h2>Locked</h2>
+                            <p>Pass level 5</p>
+                            <p>to unlock</p>
+                        </div>
+                    </div>
+                    <!-- level content -->
+                    <div class="level-item locked">
+                        <img src="level img/Lvl6.jpg" width="20px, height: 30px">
                         <!-- level box-text -->
                         <div class="lvlbox-text">
                             <!-- level name -->
@@ -166,19 +215,30 @@
                             <!-- level coin -->
                             <p class="lvl-coin">100,000 Gato</p>
                             <!-- level farming speed  -->
-                            <p>10,000/4hrs</p>
+                            <p class="level-speed">10,000/4hrs</p>
                             <!-- level upgrade btn -->
                             <div class="upgrade-btn">
-                                <button onclick="upgradeClr()" id="upgrade-btn">Upgrade</button>
+                                <button onclick="upgradeLevel(6)" class="upgrade-btn">Upgrade</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- level box -->
+
+
+                <!-- level 7 -->
                 <div class="level-box">
-                    <!-- level box1 -->
-                    <div class="level-box1">
-                        <img src="images/lvl7.PNG">
+                    <!-- locked -->
+                    <div class="level-cover">
+                        <img src="images/lock-svgrepo-com.svg" alt="lock level">
+                        <div class="lvlbox-info">
+                            <h2>Locked</h2>
+                            <p>Pass level 6</p>
+                            <p>to unlock</p>
+                        </div>
+                    </div>
+                    <!-- level content -->
+                    <div class="level-item locked">
+                        <img src="level img/Lvl7.jpg">
                         <!-- level box-text -->
                         <div class="lvlbox-text">
                             <!-- level name -->
@@ -186,10 +246,10 @@
                             <!-- level coin -->
                             <p class="lvl-coin">150,000 Gato</p>
                             <!-- level farming speed -->
-                            <p>13,000/4hrs</p>
+                            <p class="level-speed">13,000/4hrs</p>
                             <!-- level-upgrade-btn -->
                             <div class="upgrade-btn">
-                                <button onclick="upgradeClr()" id="upgrade-btn">Upgrade</button>
+                                <button onclick="upgradeLevel(7)" class="upgrade-btn">Upgrade</button>
                             </div>
                             <!-- level upgrade requirement section -->
                             <div class="requirement">
@@ -208,25 +268,51 @@
                             </div>
                         </div>
                     </div>
-                    <!-- level box1 -->
-                    <div class="level-box1">
+                </div>
+
+                <!-- level 8 -->
+                <div class="level-box">
+                    <!-- locked -->
+                    <div class="level-cover">
+                        <img src="images/lock-svgrepo-com.svg" alt="lock level">
+                        <div class="lvlbox-info">
+                            <h2>Locked</h2>
+                            <p>Pass level 7</p>
+                            <p>to unlock</p>
+                        </div>
+                    </div>
+                    <!-- level content -->
+                    <div class="level-item locked">
                         <!-- level img -->
-                        <img src="images/lvl8.PNG" width="20px, height: 30px">
+                        <img src="level img/Lvl8.jpg" width="20px, height: 30px">
                         <!-- level box-text -->
                         <div class="lvlbox-text">
                             <p class="lvl-name">Lv8-Cato</p>
                             <p class="lvl-coin">200,000 Gato</p>
-                            <p>15,000/4hrs</p>
+                            <p class="level-speed">15,000/4hrs</p>
                             <!-- level upgrade-btn -->
                             <div class="upgrade-btn">
-                                <button onclick="upgradeClr()" id="upgrade-btn">Upgrade</button>
+                                <button onclick="upgradeLevel(8)" class="upgrade-btn">Upgrade</button>
                             </div>
                         </div>
                     </div>
-                    <!-- level box1 -->
-                    <div class="level-box1">
+                </div>
+
+                <!-- level 9 -->
+                <div class="level-box">
+                    <!-- locked -->
+                    <div class="level-cover">
+                        <img src="images/lock-svgrepo-com.svg" alt="lock level">
+                        <div class="lvlbox-info">
+                            <h2>Locked 8</h2>
+                            <p>Pass level</p>
+                            <p>to unlock</p>
+                        </div>
+                    </div>
+                    <!-- level content -->
+                    <div class="level-item locked">
                         <!-- level image -->
-                        <img src="images/lvl9.PNG" width="20px, height: 30px">
+                        <img src="level img/Lvl9.jpg" width="20px, height: 30px">
                         <!-- level box-text -->
                         <div class="lvlbox-text">
                             <!-- level name -->
@@ -234,10 +320,10 @@
                             <!-- level coin -->
                             <p class="lvl-coin">400,000 Gato</p>
                             <!-- level farming speed -->
-                            <p>17,000/4hrs</p>
+                            <p class="level-speed">17,000/4hrs</p>
                             <!-- level upgrade-btn -->
                             <div class="upgrade-btn">
-                                <button onclick="upgradeClr()" id="upgrade-btn">Upgrade</button>
+                                <button onclick="upgradeLevel(9)" id]class="upgrade-btn">Upgrade</button>
                             </div>
                             <!-- level requirement -->
                             <div class="requirement">
@@ -257,12 +343,23 @@
                         </div>
                     </div>
                 </div>
-                <!-- level box -->
+
+
+                <!-- level 10 -->
                 <div class="level-box">
-                    <!-- level box1 -->
-                    <div class="level-box1">
+                    <!-- locked -->
+                    <div class="level-cover">
+                        <img src="images/lock-svgrepo-com.svg" alt="lock level">
+                        <div class="lvlbox-info">
+                            <h2>Locked</h2>
+                            <p>Pass level 9</p>
+                            <p>to unlock</p>
+                        </div>
+                    </div>
+                    <!-- level content -->
+                    <div class="level-item locked">
                         <!-- level image -->
-                        <img src="images/lvl10.PNG" width="20px, height: 30px">
+                        <img src="level img/Lvl10.jpg" width="20px, height: 30px">
                         <!-- level box-text -->
                         <div class="lvlbox-text">
                             <!-- level name -->
@@ -271,27 +368,41 @@
                             <p class="lvl-coin">500,000 Gato</p>
                             <p>GP</p>
                             <!-- level farming speed -->
-                            <p>19,000/4hrs</p>
+                            <p class="level-speed">19,000/4hrs</p>
                             <!-- level upgrade-btn -->
                             <div class="upgrade-btn">
-                                <button onclick="upgradeClr()" id="upgrade-btn">Upgrade</button>
+                                <button onclick="upgradeLevel(10)" class="upgrade-btn">Upgrade</button>
                             </div>
                         </div>
                     </div>
-                    <!-- level box1 -->
-                    <div class="level-box1">
+                </div>
+
+
+                <!-- level 11 -->
+                <div class="level-box">
+                    <!-- locked -->
+                    <div class="level-cover">
+                        <img src="images/lock-svgrepo-com.svg" alt="lock level">
+                        <div class="lvlbox-info">
+                            <h2>Locked</h2>
+                            <p>Pass level 10</p>
+                            <p>to unlock</p>
+                        </div>
+                    </div>
+                    <!-- level content -->
+                    <div class="level-item locked">
                         <!-- level image -->
-                        <img src="images/lvl11.PNG" width="20px, height: 30px">
+                        <img src="level img/Lvl11.jpg" width="20px, height: 30px">
                         <!-- level-box-text -->
                         <div class="lvlbox-text">
                             <!-- level-name -->
                             <p class="lvl-name">Lv11-Godfather</p>
                             <p>GP(BYpass avaiable)</p>
                             <!-- level farming speed -->
-                            <p>20,000/4hrs</p>
+                            <p class="level-speed">20,000/4hrs</p>
                             <!-- level upgrade-btn -->
                             <div class="upgrade-btn">
-                                <button onclick="upgradeClr()" id="upgrade-btn">Upgrade</button>
+                                <button onclick="upgradeLevel(11)" class="upgrade-btn">Upgrade</button>
                             </div>
                             <!-- level bypass-btn -->
                             <div class="Bypass-btn">
@@ -299,10 +410,23 @@
                             </div>
                         </div>
                     </div>
-                    <!-- level box1 -->
-                    <div class="level-box1">
+                </div>
+
+                <!-- level 12 -->
+                <div class="level-box">
+                    <!-- locked -->
+                    <div class="level-cover">
+                        <img src="images/lock-svgrepo-com.svg" alt="lock level">
+                        <div class="lvlbox-info">
+                            <h2>Locked</h2>
+                            <p>Pass level 11</p>
+                            <p>to unlock</p>
+                        </div>
+                    </div>
+                    <!-- level content -->
+                    <div class="level-item locked">
                         <!-- level image -->
-                        <img src="images/lvl12.PNG" width="20px, height: 30px">
+                        <img src="level img/Lvl12.jpg" width="20px, height: 30px">
                         <!-- level box-text -->
                         <div class="lvlbox-text">
                             <!-- level name -->
@@ -319,34 +443,8 @@
                             </div>
                         </div>
                     </div>
-                    <!-- locked -->
-                    <div class="level-box1">
-                        <!-- locked -->
-                        <div class="locked">
-
-                        </div>
-                        <div class="level-item">
-                            <!-- level image -->
-                            <img src="images/lvl12.PNG" width="20px, height: 30px">
-                            <!-- level box-text -->
-                            <div class="lvlbox-text">
-                                <!-- level name -->
-                                <p class="lvl-name">Lv12-Gato</p>
-                                <p>GP</p>
-                                <p>Telegram Stars</p>
-                                <!-- level-upgrade-btn -->
-                                <div class="upgrade-btn">
-                                    <button onclick="upgradeClr()" id="upgrade-btn">Upgrade</button>
-                                </div>
-                                <!-- level bypass-btn -->
-                                <div class="Bypass-btn">
-                                    <button onclick="changeClr()" id="bypass-btn">ByPass</button>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
                 </div>
+
             </div>
         </div>
     </div>

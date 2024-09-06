@@ -66,13 +66,17 @@ function startCountdown() {
 
 // toggle btw active and complete mission
 function completebtn() {
-    document.getElementById("activeTask").style.display = "none";
-    document.getElementById("taskComplete").style.display = "block";
+    document.getElementById("activeTasks").style.display = "none";
+    document.getElementById("opt").style.textDecoration = "underline";
+    document.getElementById("opt1").style.textDecoration = "none";
+    document.getElementById("completedTasks").style.display = "block";
 }
 
 function activebtn() {
-    document.getElementById("activeTask").style.display = "block";
-    document.getElementById("taskComplete").style.display = "none";
+    document.getElementById("activeTasks").style.display = "block";
+    document.getElementById("opt").style.textDecoration = "none";
+    document.getElementById("opt1").style.textDecoration = "underline";
+    document.getElementById("completedTasks").style.display = "none";
 }
 
 // mission complete button
@@ -87,7 +91,7 @@ function startTask(button) {
 
 // function to open the verification modal
 function openModal(button) {
-    currentTaskElement = button.parentElement.parentElement;
+    currentTaskElement = button.parentElement.parentElement.parentElement;
     // store the task element
     document.getElementById('verifyModal').style.display = 'flex'; //show the modal
 }
@@ -100,6 +104,7 @@ function closeModal() {
 function completeTask() {
     // Move the task from active to completed
     const completedTasks = document.getElementById('completedTasks');
+    const missionBox = document.querySelector(".mission-boxes");
     completedTasks.appendChild(currentTaskElement);
     // remove the start and verify buttons from the task
     currentTaskElement.querySelector('.start-btn').remove();
