@@ -264,77 +264,79 @@ progress::-webkit-progress-value {
     background-color: #fff;
 }
 
-.box-award {
-    margin-top: 15px;
-    padding: 10px 15px;
-    background-color: rgba(24, 21, 1, 0.74);
-    border-radius: 15px;
-    border-top-right-radius: 15px;
+.award-container {
+    padding: 15px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
     display: flex;
-    min-height: 120px;
-    flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    width: 100vw;
     box-shadow: 0px 0px 0px 3px rgba(255, 255, 255, 0.87) inset;
     gap: 5px;
-
-    .box {
-        width: 120px;
-        height: 100px;
-        background-color: rgba(209, 202, 202, 0.582);
-        border-radius: 15px;
-        position: relative;
-
-        .bullet {
-            display: flex;
-            float: right;
-            margin: 7px;
-        }
-
-        .bullet::before {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background-color: #fff;
-            opacity: 1;
-            content: "";
-        }
-
-        .box-icon {
-            position: absolute;
-            top: 40%;
-            left: 50%;
-            transform: translate(-50%, -40%) !important;
-        }
-
-        p.daily-title {
-            font-size: 12px;
-            font-weight: bold;
-            margin-bottom: 5px;
-            position: absolute;
-            top: 65%;
-            width: 100%;
-            text-align: center;
-            justify-content: center;
-        }
-
-        .box-icon img {
-            background-color: rgb(12, 12, 12);
-            border-radius: 50%;
-            padding: 5px;
-        }
-    }
+    background-color: rgba(24, 21, 1, 0.74);
+    border-radius: 15px;
+    display: flex;
+    min-height: 120px;
 }
 
-.come p {
-    position: absolute;
-    bottom: 5px;
-    font-weight: 600;
-    font-size: 10px;
-    width: 100%;
+.box {
+    background-color: rgba(209, 202, 202, 0.582);
+    height: 100px;
     text-align: center;
-    justify-content: center;
-    text-decoration: underline;
+    align-items: center;
+    width: calc(33.33% - 5px);
 }
+
+.bullet {
+    display: flex;
+    float: right;
+    margin: 7px;
+}
+
+.bullet::before {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 1;
+    content: "";
+}
+
+.box-icon {
+    position: relative;
+    top: 40%;
+    left: 60%;
+    transform: translate(-50%, -40%) !important;
+}
+
+.box-icon img {
+    background-color: rgb(12, 12, 12);
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.daily-title a {
+    font-size: 15px;
+    position: relative;
+    top: 20px;
+    left: 5px;
+    margin-bottom: 5px;
+}
+
+.daily-title a:hover {
+    color: #000;
+}
+
+.box p {
+    margin-top: 5px;
+    font-size: 12px;
+    position: relative;
+    top: 12px;
+    left: 5px;
+}
+
+
 
 .main-page-img img {
     height: 68vh;
@@ -431,35 +433,30 @@ progress::-webkit-progress-value {
 
 /* footer styling begins */
 .footer {
-    background-color: rgba(0, 0, 0, 0.918);
+    background-color: rgb(8, 8, 8);
     display: flex;
-    flex-direction: row;
-    gap: 10px;
     justify-content: space-between;
+    align-items: center;
+    height: 60px;
     position: fixed;
-    width: 100vw;
-    min-height: 50px;
-    background-color: #000;
     bottom: 0;
-    color: white;
+    width: 100vw;
+    gap: 5px;
+    padding: 3px 5px;
+    font-weight: bold;
+}
 
-    .footer-box1 {
-        display: flex;
-        width: 30%;
-        gap: 10px;
-        margin: 5px 10px;
-        justify-content: space-between;
+.footer-item {
+    flex-grow: 1;
+    text-align: center;
+}
 
-        .footer-box {
-            text-align: center;
-        }
-    }
+.footer-item a:hover {
+    color: rgb(100, 100, 100);
+}
 
-    .home {
-        position: relative;
-        top: -8px;
-        left: 8px;
-    }
+.footer-item p {
+    font-size: 16px;
 }
 
 /* footer styling ends */
@@ -1269,8 +1266,8 @@ button {
 
 }
 
-.penalty-text,
-.award-text {
+.penalty-amount,
+.award-amount {
     font-size: 45px;
     font-weight: bolder;
 }
