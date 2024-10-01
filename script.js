@@ -113,3 +113,66 @@ function completeTask() {
     currentTaskElement.classList.add('completed');
     closeModal(); // close the modal
 }
+
+// for level requirements
+
+const levelRequirements = {
+    3: { coins: 0, invites: 0, requiredCoins: 40000, requiredInvites: 2 },
+    5: { coins: 0, invites: 0, requiredCoins: 80000, requiredInvites: 5 },
+    7: { coins: 0, invites: 0, requiredCoins: 150000, requiredInvites: 10 },
+    9: { coins: 0, invites: 0, requiredCoins: 400000, requiredInvites: 15 },
+};
+
+// function to update the UI for a specific level
+function updateLevelUI(level) {
+    const coins = levelRequirements[level].coins;
+    const invites = levelRequirements[level].invites;
+    const requiredCoins = levelRequirements[level].requiredCoins;
+    const requiredInvites = levelRequirements[level].requiredInvites;
+
+    // update coin display
+    document.getElementById(`coins-${level}`).textContent = coins;
+    document.getElementById(`invites-${level}`).textContent = invites;
+
+    //check if coin requirement is met
+    const coinCheckbox = document.getElementById(`checkbox-coins-${level}`);
+    if (coins >= requiredCoins) {
+        coinCheckbox.checked = true;
+        coinCheckbox.disabled = false;
+    } else {
+        coinCheckbox.checked = false;
+        coinCheckbox.disabled = true;
+    }
+
+    // to check if the reguired amount of invites is met
+    const inviteCheckbox = document.getElementById(`checkbox-invites-${level}`);
+    if (invites >= requiredInvites) {
+        inviteCheckbox.checked = true;
+        inviteCheckbox.disabled = false;
+    } else {
+        inviteCheckbox.checked = false;
+        inviteCheckbox.disabled = true;
+    };
+}
+
+// // Simulate addding a coin to a specific level
+// function addCoin(level) {
+//     if (levelRequirements[level].coins < levelRequirements[level].requiredCoins) {
+//         levelRequirements[level].coins++;
+//         updateLevelUI(level);
+//     }
+// }
+
+// // Simulate addding an invite to a specific level
+
+// function addInvite(level) {
+//     if (levelRequirements[level].invites < levelRequirements[level].requiredInvites) {
+//         levelRequirements[level].invites++;
+//         updateLevelUI(level);
+//     }
+// }
+
+// Initialize the UI for all levels
+Object.keys(levelRequirements).forEach(level => {
+    updateLevelUI(level);
+});

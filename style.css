@@ -622,17 +622,15 @@ p.daily-tasks {
 }
 
 .level-page {
-    width: 100vw;
     margin-bottom: 40px;
 }
 
 .level-container {
-    margin: auto;
+    margin: 15px auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 20px;
-
+    gap: 15px;
+    padding: 10px 12px;
 }
 
 .level-header {
@@ -716,6 +714,7 @@ p.daily-tasks {
     border-radius: 8px;
     height: 100%;
     transition: opacity 0.5s ease-in-out;
+    display: block;
 }
 
 .locked {
@@ -771,26 +770,88 @@ p.daily-tasks {
 }
 
 .requirement {
+    width: 100%;
     display: flex;
-    gap: 3px;
     align-items: center;
+    text-align: center;
     justify-content: center;
+    gap: 15px;
 }
 
 .requirement1,
 .requirement2 {
     display: flex;
-    flex-direction: row;
-    gap: 2px;
     font-size: 9px;
     align-items: center;
-    margin-bottom: 5px;
+    margin: 3px 0 5px 0;
 }
 
-.requirement1 input[type="checkbox"],
-.requirement2 input[type="checkbox"] {
-    width: 8px;
+.custom-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    position: relative;
+}
+
+.custom-checkbox .checkmark {
+    height: 15px;
+    width: 15px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    position: relative;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    line-height: 15px;
+    font-size: 12px;
+    color: #000;
+    font-weight: bold;
+}
+
+
+.custom-checkbox input+.checkmark::before {
+    content: "✕";
+    font-weight: 30px;
+    font-size: 12px;
+    text-align: center;
+}
+
+
+.custom-checkbox input[type="checkbox"]:checked+.checkmark {
+    background-color: #000;
+}
+
+#invites-3,
+#coins-3,
+#invites-5,
+#coins-5,
+#invites-7,
+#coins-7,
+#invites-9,
+#coins-9 {
+    display: none;
+}
+
+.custom-checkbox .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 5px;
+    top: 2px;
+    width: 3px;
     height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.custom-checkbox input[type="checkbox"]:checked+.checkmark:after {
+    display: block;
 }
 
 /*Level page styling ends*/
@@ -904,7 +965,7 @@ p.daily-tasks {
     margin-bottom: 50px;
 }
 
-#no-recurit {
+.no-recurit {
     margin-bottom: 7px;
 }
 
@@ -912,7 +973,7 @@ p.daily-tasks {
     display: flex;
     align-items: center;
     gap: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .invite-profile-img {
@@ -1568,7 +1629,6 @@ button {
 }
 
 /*Bonus page styling ends*/
-
 
 
 @media screen and (max-width: 768px) {
