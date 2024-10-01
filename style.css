@@ -269,6 +269,12 @@ progress::-webkit-progress-value {
     background-color: #fff;
 }
 
+.award-box-container {
+    margin: 0px auto;
+    justify-content: center;
+    padding-left: 1px;
+}
+
 .award-container {
     padding: 15px;
     border: 1px solid #ddd;
@@ -276,7 +282,7 @@ progress::-webkit-progress-value {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100vw;
+    width: 98vw;
     box-shadow: 0px 0px 0px 3px rgba(255, 255, 255, 0.87) inset;
     gap: 5px;
     background-color: rgba(24, 21, 1, 0.74);
@@ -322,12 +328,15 @@ progress::-webkit-progress-value {
     padding: 5px;
 }
 
+.daily-title {
+    text-align: center;
+}
+
 .daily-title a {
-    font-size: 15px;
+    font-size: 13px;
     position: relative;
-    top: 8px;
-    left: 5px;
-    margin-bottom: 5px;
+    top: 6px;
+    margin-bottom: 4gpx;
 }
 
 .daily-title a:hover {
@@ -336,13 +345,10 @@ progress::-webkit-progress-value {
 
 .box p {
     margin-top: 2px;
-    font-size: 10px;
+    font-size: 9px;
     position: relative;
-    /* top: 3px; */
-    left: 5px;
+    text-align: center;
 }
-
-
 
 .main-page-img img {
     height: 68vh;
@@ -1861,4 +1867,68 @@ button {
     .box-cap3 p {
         font-size: 15px;
     }
+}
+
+@media screen and (min-width: 768px) {
+    .box-award {
+        margin-top: 15px;
+        padding: 10px 15px;
+        background-color: rgba(24, 21, 1, 0.74);
+        border-radius: 15px;
+        border-top-right-radius: 15px;
+        display: flex;
+        flex-direction: row;
+        min-height: 120px;
+        justify-content: space-between;
+        box-shadow: 0px 0px 0px 3px rgba(255, 255, 255, 0.87) inset;
+        gap: 5px;
+
+        .box {
+            width: 120px;
+            height: 100px;
+            background-color: rgba(209, 202, 202, 0.582);
+            border-radius: 15px;
+            position: relative;
+
+            .bullet {
+                display: flex;
+                float: right;
+                margin: 7px;
+            }
+
+            .bullet::before {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: #fff;
+                opacity: 1;
+                content: "";
+            }
+
+            .box-icon {
+                position: absolute;
+                top: 40%;
+                left: 50%;
+                transform: translate(-50%, -40%) !important;
+            }
+
+            p.daily-title {
+                font-size: 12px;
+                font-weight: bold;
+                margin-bottom: 5px;
+                position: absolute;
+                top: 65%;
+                width: 100%;
+                text-align: center;
+                justify-content: center;
+            }
+
+            .box-icon img {
+                background-color: rgb(12, 12, 12);
+                border-radius: 50%;
+                padding: 5px;
+            }
+        }
+    }
+
 }
